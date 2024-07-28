@@ -1,0 +1,26 @@
+---
+dependency:
+  name: galaxy
+
+driver:
+  name: vagrant
+
+platforms:
+  
+  - name: ubuntu
+    box: ubuntu/bionic64
+    memory: 1024
+    cpus: 2
+  
+
+provisioner:
+  name: ansible
+  lint: |
+    set -e
+    yamllint .
+    ansible-lint .
+  playbooks:
+    converge: converge.yml
+
+verifier:
+  name: ansible

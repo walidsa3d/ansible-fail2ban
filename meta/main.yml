@@ -1,0 +1,12 @@
+galaxy_info:
+  role_name: fail2ban
+  author: "walidsa3d"
+  description: "Install Fail2ban"
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bla
+  galaxy_tags: []
+dependencies: []
