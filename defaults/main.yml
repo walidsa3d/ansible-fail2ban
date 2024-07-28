@@ -1,0 +1,25 @@
+fail2ban_loglevel: INFO
+fail2ban_ignoreip: 127.0.0.1/8
+fail2ban_bantime: 600
+fail2ban_maxretry: 5
+fail2ban_services:
+  - name: sshd
+    enabled: true
+    port: ssh
+    filter: sshd
+    logpath: /var/log/auth.log
+    maxretry: 5
+
+  - name: nginx-http-auth
+    enabled: true
+    port: http,https
+    filter: nginx-http-auth
+    logpath: /var/log/nginx/error.log
+    maxretry: 3
+
+  - name: nginx-badbots
+    enabled: true
+    port: http,https
+    filter: nginx-badbots
+    logpath: /var/log/nginx/access.log
+    maxretry: 2
