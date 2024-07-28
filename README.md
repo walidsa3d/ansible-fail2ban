@@ -41,7 +41,7 @@ Here is an example of how to use this role in a playbook:
 ---
 - name: Install and configure Fail2ban.
   hosts: all
-  become: yes
+  become: true
   roles:
     - role: fail2ban
 ```
