@@ -1,0 +1,17 @@
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Run Testinfra tests
+      command: pytest
+      become: true
+    # - name: Check fail2ban service is running
+    #   service:
+    #     name: fail2ban
+    #     state: started
+    #   register: fail2ban_service
+    #   become: true
+
+    # - name: Assert fail2ban service is running
+    #   assert:
+    #     that:
+    #       - fail2ban_service.state == "started"

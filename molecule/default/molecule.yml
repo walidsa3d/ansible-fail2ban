@@ -7,7 +7,7 @@ driver:
 
 platforms:  
   - name: ubuntu
-    box: ubuntu/bionic64
+    box: ubuntu/jammy64
     memory: 1024
     cpus: 2
   
@@ -21,4 +21,19 @@ provisioner:
     converge: converge.yml
 
 verifier:
-  name: ansible
+  name: testinfra
+  # options:
+  #   v: True
+  #   s: True
+
+scenario:
+  name: default
+  create_sequence:
+    - create
+  check_sequence:
+    - destroy
+    - dependency
+    - create
+  converge_sequence:
+    - create 
+    - converge
