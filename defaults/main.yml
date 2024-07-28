@@ -1,6 +1,7 @@
 loglevel: INFO
 ban_ignoreip: 127.0.0.1/8
-bantime: 600
+bantime: 20m
+findtime: 600
 maxretry: 10
 services:
   - name: sshd

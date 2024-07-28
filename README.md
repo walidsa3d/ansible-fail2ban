@@ -26,7 +26,8 @@ The variables used in this role are defined in `defaults/main.yml` and can be cu
 |--------------------|-------------------------|--------------------------------------|
 | `logelevel`  | `INFO`      | log level|
 | `ban_ignoreip`  | `INFO`      | excluded ips|
-| `bantime`  | `600`      | banned 600 seconds|
+| `bantime`  | `600`      | number of seconds an IP address is banned |
+| `findtime`  | `600`      | retris must occur within the findtime duration. |
 | `maxretry`  | `5`      | max retries before ban|
 
 ## Dependencies
