@@ -1,10 +1,3 @@
-import testinfra.utils.ansible_runner
-
-testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    ".molecule/ansible_inventory"
-).get_hosts("all")
-
-
 def test_fail2ban_installed(host):
     pkg = host.package("fail2ban")
     assert pkg.is_installed

@@ -1,6 +1,6 @@
 # fail2ban
 
-Install Fail2ban
+An Ansible role to install fail2ban on Ubuntu/Debian.
 
 ## Table of Contents
 
@@ -18,16 +18,16 @@ Install Fail2ban
 - Supported platforms:
   - Ubuntu
 
-
 ## Role Variables
 
 The variables used in this role are defined in `defaults/main.yml` and can be customized as per your requirements. Here are some of the main variables:
 
 | Variable           | Default Value           | Description                          |
 |--------------------|-------------------------|--------------------------------------|
-| `docker_data_dir`  | `/mnt/docker_data`      | Directory for Docker data            |
-| `molecule_driver`  | `vagrant`               | Molecule driver (vagrant, docker, podman) |
-| `molecule_verifier`| `ansible`               | Molecule verifier (ansible, testinfra) |
+| `logelevel`  | `INFO`      | log level|
+| `ban_ignoreip`  | `INFO`      | excluded ips|
+| `bantime`  | `600`      | banned 600 seconds|
+| `maxretry`  | `5`      | max retries before ban|
 
 ## Dependencies
 
@@ -44,7 +44,6 @@ Here is an example of how to use this role in a playbook:
   become: yes
   roles:
     - role: fail2ban
-      docker_data_dir: /mnt/docker_data
 ```
 
 ## License

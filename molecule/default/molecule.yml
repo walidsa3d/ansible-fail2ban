@@ -5,14 +5,12 @@ dependency:
 driver:
   name: vagrant
 
-platforms:
-  
+platforms:  
   - name: ubuntu
     box: ubuntu/bionic64
     memory: 1024
     cpus: 2
   
-
 provisioner:
   name: ansible
   lint: |

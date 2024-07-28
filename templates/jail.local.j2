@@ -1,13 +1,13 @@
 # Fail2Ban jail.local configuration
 
 [DEFAULT]
-ignoreip = {{ fail2ban_ignoreip }}
-bantime  = {{ fail2ban_bantime }}
+ignoreip = {{ ignoreip }}
+bantime  = {{ bantime }}
 findtime  = 600
-maxretry = {{ fail2ban_maxretry }}
-loglevel = {{ fail2ban_loglevel }}
+maxretry = {{ maxretry }}
+loglevel = {{ loglevel }}
 
-{% for service in fail2ban_services %}
+{% for service in services %}
 [{{ service.name }}]
 enabled = {{ service.enabled }}
 port = {{ service.port }}
