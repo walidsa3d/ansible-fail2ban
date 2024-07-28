@@ -39,7 +39,7 @@ Here is an example of how to use this role in a playbook:
 
 ```yaml
 ---
-- name: Install and configure Docker
+- name: Install and configure Fail2ban.
   hosts: all
   become: yes
   roles:
