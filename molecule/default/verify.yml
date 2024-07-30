@@ -1,6 +1,7 @@
+---
 - name: Verify
   hosts: all
   tasks:
     - name: Run Testinfra tests
-      command: pytest
+      ansible.builtin.command: pytest
       become: true
