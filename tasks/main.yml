@@ -1,18 +1,18 @@
 - name: Install Fail2Ban
-  apt:
+  ansible.builtin.apt:
     name: fail2ban
     state: present
   become: true
 
 - name: Configure Fail2Ban
-  template:
+  ansible.builtin.template:
     src: jail.local.j2
     dest: /etc/fail2ban/jail.local
   notify: restart fail2ban
   become: true
 
 - name: Ensure Fail2Ban service is running
-  service:
+  ansible.builtin.service:
     name: fail2ban
     state: started
     enabled: true
