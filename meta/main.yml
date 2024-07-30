@@ -3,7 +3,7 @@ galaxy_info:
   author: "walidsa3d"
   description: An Ansible role to Install Fail2ban on Ubuntu.
   license: MIT
-  min_ansible_version: 2.9
+  min_ansible_version: "2.9"
   platforms:
     - name: Ubuntu
       versions:
