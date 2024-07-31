@@ -4,6 +4,6 @@
   gather_facts: true
   become: true
   tasks:
-    - name: "Include role"
-      include_role:
+    - name: Include role
+      ansible.builtin.include_role:
         name: failban

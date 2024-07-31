@@ -1,7 +1,8 @@
 # fail2ban
 
 An Ansible role to install fail2ban on Ubuntu/Debian.
-
+![Ansible Role](https://img.shields.io/ansible/role/d/walidsa3d/failban)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/walidsa3d/ansible-fail2ban/main.yml)
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -44,7 +45,7 @@ Here is an example of how to use this role in a playbook:
   hosts: all
   become: true
   roles:
-    - role: fail2ban
+    - role: walidsa3d.failban
 ```
 
 ## License
