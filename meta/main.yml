@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: fail2ban
+  role_name: failban
   author: "walidsa3d"
   description: An Ansible role to Install Fail2ban on Ubuntu.
   license: MIT

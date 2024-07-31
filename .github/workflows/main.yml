@@ -6,7 +6,7 @@ on:
       - '*'
 defaults:
   run:
-    working-directory: "walidsa3d.fail2ban"
+    working-directory: "walidsa3d.failban"
 jobs:
   release:
     name: Release
@@ -15,7 +15,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v4
         with:
-          path: "walidsa3d.fail2ban"
+          path: "walidsa3d.failban"
 
       - name: Set up Python 3.
         uses: actions/setup-python@v5
