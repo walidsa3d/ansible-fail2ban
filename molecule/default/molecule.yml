@@ -22,9 +22,6 @@ provisioner:
 
 verifier:
   name: testinfra
-  # options:
-  #   v: True
-  #   s: True
 
 scenario:
   name: default
